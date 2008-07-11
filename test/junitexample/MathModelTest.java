@@ -41,7 +41,7 @@ public class MathModelTest {
      * Test of add method, of class MathModel.
      */
     @Test
-    public void testAdd() {
+    public void testAddZeros() {
         System.out.println("add");
         int a = 0;
         int b = 0;
@@ -49,15 +49,27 @@ public class MathModelTest {
         int expResult = 0;
         int result = instance.add(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of add method, of class MathModel.
+     */
+    @Test
+    public void testAddNumbers() {
+        System.out.println("add");
+        int a = 3;
+        int b = 4;
+        MathModel instance = new MathModel();
+        int expResult = 7;
+        int result = instance.add(a, b);
+        assertEquals(expResult, result);
     }
 
     /**
      * Test of subtract method, of class MathModel.
      */
     @Test
-    public void testSubtract() {
+    public void testSubtractZeros() {
         System.out.println("subtract");
         int a = 0;
         int b = 0;
@@ -65,8 +77,20 @@ public class MathModelTest {
         int expResult = 0;
         int result = instance.subtract(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of subtract method, of class MathModel.
+     */
+    @Test
+    public void testSubtractNumbers() {
+        System.out.println("subtract");
+        int a = 10;
+        int b = 9;
+        MathModel instance = new MathModel();
+        int expResult = 1;
+        int result = instance.subtract(a, b);
+        assertEquals(expResult, result);
     }
 
 }
